@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    width:.4rem;
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    color:gray;
+}
+body{
+    font-family: 'Itim', cursive;
+    display: flex;
+    line-height: 1.4;
+    flex-wrap:wrap;
+}
+.portfolio{
+    background-color: black;
+    padding:20px;
+    display: grid;
+    height: 75vh;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-gap:20px;
+}
+.portfolioItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    color: black;
+}
+.square {
+grid-column:span 2;
+grid-row:span 2;
+position: relative;
+}
+.sidebar{
+flex: 1 1 20%;
+color: white;
+background-color: black;
+min-width:300px;
+justify-content: center;
+align-items: center;
+padding: 1%;
+}
+
+.sidebar .logo{
+text-align: center;
+}
+.mainItem{
+flex: 1 1 80%;
+padding: 2.5%;
+background-color:rgb(64, 51, 51);
+height: 81.7vh;
+}
+
+.largeSquare{
+grid-row: span 3;
+grid-column: span 3;
+background-image: url(./black_chair.jpg);
+background-size: cover;
+background-position: center;
+color: white;
+transition: all ease-in 300ms;
+position:relative;
+}
+.portfolioItem::before{
+content: '';
+display: block;
+background-color: orangered;
+background-blend-mode: multiply;
+opacity:0.4;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+transition: all ease-in 300ms;
+z-index: 4;
+
+}
+.portfolioItem:hover::before{
+opacity:0;
+z-index: 1;
+cursor: pointer;
+}
+span{
+color: red;
+}
+
+.One{
+background-image: url(./furniture1.jpg);
+background-size: cover;
+background-position: center;
+color: white;
+}
+
+.three{
+background-image: url(./furniture4.jpg);
+background-size: cover;
+background-position: center;
+}
+
+.tall{
+background-image: url(./furniture2.jpg);
+background-size: cover;
+background-position: center;
+grid-column: span 2;
+grid-row: span 3;
+position: relative;
+}
+
+.smallSquare{
+font-weight: 600;
+position: relative;
+background-blend-mode: multiply;
+text-align: center;
+}
+
+.wide{
+background-image: url(./furniture3.jpg);
+background-size: cover;
+background-position: center;
+grid-column: span 3;
+grid-row: span 2;
+position: relative;
+}
